@@ -1,0 +1,5 @@
+post http://localhost:3000/api/trigger/
+
+### prod
+
+get https://clerk-slack-notifier-util.clerkstage.dev/api/trigger/
