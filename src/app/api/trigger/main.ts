@@ -9,6 +9,7 @@ export async function scanForUpdates() {
   const cache = res.map(el => el.id)
   // Get recent projects with no milestones
   const projects = await getProjectsWithoutMilestone()
+  console.log(`Found ${projects.length} projects without milestones`)
   for(const i of projects) {
     if(cache.find(ci => ci === i.id)) {
       continue
@@ -27,6 +28,7 @@ export async function scanForUpdates() {
   }
 
   const milestones = await getProjectsWithMilestones()
+  console.log(`Found ${milestones.length} milestones`)
   for(const i of milestones) {
     if(cache.find(ci => ci === i.id)) {
       continue
