@@ -1,6 +1,6 @@
 import { sendNotification } from './slack';
 import { getProjectsWithMilestones, getProjectsWithoutMilestone } from './linear';
-import { ShippedType, getAllSentItems, logSentItem } from './neon';
+import { ShippedType, getAllSentItems, logSentItem } from './mysql';
 import { sleep } from './utils';
 
 export async function scanForUpdates() {
