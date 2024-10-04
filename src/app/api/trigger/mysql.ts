@@ -2,10 +2,10 @@ import mysql, { RowDataPacket } from 'mysql2/promise';
 
 async function getDb() {
   return await mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'pass123',
-    database: 'test',
+    host: process.env.MYSQL_HOST,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASS,
+    database: process.env.MYSQL_DB,
   });
 }
 
